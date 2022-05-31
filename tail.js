@@ -21,6 +21,9 @@ assertEqual(5, 8);
 assertEqual("Snowie is sleeping", "Snowie is sleeping");
 
 
+// JavaScript doesn't allow the use of === or == to compare two arrays.
+
+
 let tail = function (arrs) {
   return arrs.slice(1);
 }
