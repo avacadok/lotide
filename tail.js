@@ -2,14 +2,13 @@
 const assertEqual = function(actual, expected) {
 
   if (actual !== expected) {
-      console.log(`Assertion Failed: ${actual} !== ${expected}`)
+    console.log(`Assertion Failed: ${actual} !== ${expected}`);
 
-      //can also use console.assert()
-      //console.assert(actual === expected,( actual + " !== " +  expected))
-      //msg will be printed if actual !== expected
-
+    //can also use console.assert()
+    //console.assert(actual === expected,( actual + " !== " +  expected))
+    //msg will be printed if actual !== expected
   } else {
-      console.log(`Assertion Passed: ${actual} === ${expected}`)
+    console.log(`Assertion Passed: ${actual} === ${expected}`);
   }
 
 };
@@ -24,9 +23,9 @@ assertEqual("Snowie is sleeping", "Snowie is sleeping");
 // JavaScript doesn't allow the use of === or == to compare two arrays.
 
 
-let tail = function (arrs) {
+let tail = function(arrs) {
   return arrs.slice(1);
-}
+};
 const result = tail(["Hello", "Lighthouse", "Labs"]);
 assertEqual(result, ["Lighthouse", "Labs"]);
 
