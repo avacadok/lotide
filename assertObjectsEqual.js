@@ -20,8 +20,8 @@ const eqArrays = function(arr1, arr2) {
 const eqObjects = function(object1, object2) {
   //this function does not work on arrays inside objects
   //put keys into an array
-  console.log(object1)
-  console.log(object2)
+  console.log(object1);
+  console.log(object2);
   const keys1 = Object.keys(object1);
   const keys2 = Object.keys(object2);
   // console.log(keys1, keys2)
@@ -48,10 +48,11 @@ const eqObjects = function(object1, object2) {
 };
 
 const assertObjectsEqual = function(x, y) {
-const inspect = require('util').inspect;
+//add this function to use external library function so program can read object
+  const inspect = require('util').inspect;
   if (eqObjects(x, y)) {
    
-    console.log(`✅✅✅Assertion Passed: ${inspect(x)} === ${inspect(y)}`);    
+    console.log(`✅✅✅Assertion Passed: ${inspect(x)} === ${inspect(y)}`);
     
   } else {
     console.log(`❌❌❌Assertion Failed: ${inspect(x)} !== ${inspect(y)}`);
@@ -66,3 +67,4 @@ const abc = { a: "1", b: "2", c: "3" };
 
 // assertObjectsEqual(eqObjects(ab,ba), true);
 assertObjectsEqual(ab, ba);
+assertObjectsEqual(abc, ba);
