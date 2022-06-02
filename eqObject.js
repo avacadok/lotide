@@ -36,21 +36,23 @@ const eqObjects = function(object1, object2) {
   const keys1 = Object.keys(object1);
   const keys2 = Object.keys(object2);
   // console.log(keys1, keys2)
-  if (object1.length !== object2.length) {
+  if (keys1.length !== keys2.length) {
     return false;
   }
   //only use for ..in to loop through array;
-  for (let key in object1) {
+  for (let key of keys1) {
 
     //values = (object[key])
-    if (Array.isArray(object1[key]) === true && Array.isArray(object2[key]) === true) {
+    if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
 
-      return true;
+      return eqArrays(object1[key], object2[key])
+
     } else if (object1[key] !== object2[key]) {
+      
       return false;
     }
     
-  }
+  } return true; 
 };
 
 //not sure how to do this -.-
