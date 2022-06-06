@@ -1,6 +1,7 @@
 const tail = require("../tail.js");
 const assertEqual = require("../assertEqual");
 
+//TEST CODE
 // JavaScript doesn't allow the use of === or == to compare two arrays.
 const result = tail(["Hello", "Lighthouse", "Labs"]);
 assertEqual(result, ["Lighthouse", "Labs"]);
