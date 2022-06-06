@@ -2,8 +2,7 @@ const assert = require("chai").assert;
 const tail = require("../tail.js");
 
 
-// //TEST CODE
-
+//TEST CODE
 const result = tail(["Hello", "Lighthouse", "Labs", "People"]);
 // assertEqual(result, ["Lighthouse", "Labs", "People"]);
 // assertEqual(tail(["Hello", "Lighthouse", "Labs", "coding"]), ["Lighthouse", "Labs", "coding"]);
