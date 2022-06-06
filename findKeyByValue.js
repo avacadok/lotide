@@ -1,4 +1,4 @@
-const assertEqual = require("./assertEqual")
+const assertEqual = require("./assertEqual");
 
 const findKeyByValue = function(movies, name) {
   // set output to undefined in case name does not match with any movies
