@@ -1,4 +1,3 @@
-// FUNCTION IMPLEMENTATION
 const assertEqual = function(actual, expected) {
 
   if (actual !== expected) {
@@ -14,10 +13,5 @@ const assertEqual = function(actual, expected) {
 
 };
 
-// TEST CODE
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);
-assertEqual(5, 8);
-assertEqual("Snowie is sleeping", "Snowie is sleeping");
-
+module.exports = assertEqual;
 
