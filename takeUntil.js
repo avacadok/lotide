@@ -1,29 +1,6 @@
-const eqArrays = function(arr1, arr2) {
+const eqArrays = require("./eqArrays");
+const assertArraysEqual = require("./assertArraysEqual");
 
-  //ensure both arrs have the same length before we starts, if not return false
-  if (arr1.length !== arr2.length) {
-
-    return false;
-  }
-
-  for (let i = 0; i < arr1.length; i++) {
-    //ensure all the element in the array are the same;
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  } return true;
-
-};
-//create function to compare if two array are the same based on the eqArray
-const assertArraysEqual = function(arr1, arr2) {
-  //refer to eqArray and console log the statement
-  if (eqArrays(arr1, arr2)) {
-    console.log(`✅✅✅Assertion Passed: ${arr1} === ${arr2}`);
-
-  } else {
-    console.log(`❌❌❌Assertion Failed: ${arr1} !== ${arr2}`);
-  }
-};
 const takeUntil = function(array, callback) {
   let output = [];
   //loop through each element of the array
@@ -51,3 +28,5 @@ const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Re
 const results2 = takeUntil(data2, x => x === ',');
 console.log(results2);
 assertArraysEqual(results2, [ 'I\'ve', 'been', 'to', 'Hollywood' ]);
+
+module.exports = takeUntil;
