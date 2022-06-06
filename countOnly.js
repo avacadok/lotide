@@ -1,17 +1,4 @@
-const assertEqual = function(actual, expected) {
-
-  if (actual !== expected) {
-    console.log(`❌❌❌Assertion Failed: ${actual} !== ${expected}`);
-
-    //can also use console.assert()
-    //console.assert(actual === expected,( actual + " !== " +  expected))
-    //msg will be printed if actual !== expected
-
-  } else {
-    console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`);
-  }
-
-};
+const assertEqual = require("./assertEqual");
 
 const countOnly = function(allItems, itemsToCount) {
   let result = {};
@@ -21,25 +8,18 @@ const countOnly = function(allItems, itemsToCount) {
     console.log(item);
     // if key/item on allitems exist in itemsToCount
     if (itemsToCount[item]) {
-
-      //check result[item] exist 
+      //check result[item] exist
       if (result[item]) {
-
-        //add 1 if the key exist 
+        //add 1 if the key exist
         result[item] += 1;
-
       } else {
-        //otherwise key = 1 
+        //otherwise key = 1
         result[item] = 1;
-
       }
-
-  } 
-
-} console.log(result);
+    }
+  } console.log(result);
   return result;
-
-}
+};
 
 const firstNames = [
   "Karl",
@@ -60,3 +40,5 @@ assertEqual(result1["Jason"], 1);
 assertEqual(result1["Karima"], undefined);
 assertEqual(result1["Fang"], 2);
 assertEqual(result1["Agouhanna"], undefined);
+
+module.exports = countOnly;
