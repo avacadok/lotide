@@ -24,8 +24,8 @@ describe("#tail", function() {
     assert.strictEqual(result[1], "Labs");
   });
 
-  //assert.equal or assert.strictEqual cannot compare the values of two arrays/objects
-  //deepEqual will forces to be compared as the are values.
+  //Chai gives us assert.deepEqual, because assert.strictEqual simply uses === to compare values, 
+  //which will not work for comparing objects and arrays
   it('return [2, 3, 4, 5] for [1, 2, 3, 4, 5]', () => {
     assert.deepEqual(tail([1, 2, 3, 4]), [2, 3, 4]);
   });
