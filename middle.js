@@ -15,7 +15,7 @@ const middle = function(array) {
     //we need to + 1 because the we use the Math.floor to round down the number
   } else if (array.length % 3 === 0) {
 
-    return [middleIndex + 1];
+    return [array[middleIndex]];
   }
 };
 
